@@ -1,0 +1,19 @@
+Algorithme: PGCD_CALC
+Variable A,B,reste:entier
+
+Début
+ ecrire("Entrer deux nombres Tel que A>B :")
+ Lire(A,B)
+ tantque (A=0 et B=0) ou (A<B) ou (A<0 ou B<0) Faire
+      ecrire("Les deux valeux son't incorrect\n")
+      ecrire("Entrer deux nombres Tel que A>B :")
+        Lire(A,B)
+ fintantque
+   tantque (B <> 0) Faire
+          reste <- A mod B
+          ecrire(A, " ÷ ", B ," = ",(A div B)," et le reste est ",reste,"\n")
+          A<-B
+          B<-reste
+   fintantque
+   ecrire("Le PGCD est ",A)
+Fin
